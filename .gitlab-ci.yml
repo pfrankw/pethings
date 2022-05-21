@@ -1,0 +1,9 @@
+stages:
+  - build_win
+
+job_build_win:
+  stage: build_win
+  script:
+    - cmake . -DCMAKE_BUILD_TYPE=RELEASE -DWIN32=1 && make -j4
+  tags:
+    - windev
